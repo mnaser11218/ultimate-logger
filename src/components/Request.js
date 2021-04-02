@@ -11,27 +11,13 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-export default function Request({ request, showMoreLogInfo }) {
+export default function Request({ request }) {
   return (
     <Tr>
-      <Td onClick={showMoreLogInfo}>
-        Log Class:
-        {' '}
-        <br />
-        {' '}
-        <br />
-        {request.class}
-      </Td>
-      <Td>
-        Log Date:
-        <br />
-        {' '}
-        <br />
-        {' '}
-        {request.timestamp}
-      </Td>
-      {/* <Td>{request.method}</Td>
-      <Td>{request.originalUri}</Td> */}
+      <Td>{request.class}</Td>
+      <Td>{request.timestamp}</Td>
+      <Td>{request.method}</Td>
+      <Td>{request.originalUri}</Td>
     </Tr>
   );
 }
